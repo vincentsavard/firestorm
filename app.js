@@ -2,7 +2,7 @@
 var app = angular.module("firestorm", ["ngRoute"]);
 
 app.constant("config", {
-    api_url: "http://192.168.2.18/api"
+    api_url: "http://192.168.2.18:13265/api"
 });
 
 app.config(function($routeProvider) {
