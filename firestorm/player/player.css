@@ -1,0 +1,17 @@
+.player_buttons {
+    text-align: center;
+}
+
+.player_button {
+    font-size: 200%;
+    margin-right: 20px;
+    color: #000000;
+}
+
+.player_button:hover {
+    text-decoration: none;
+}
+
+.update_container {
+    padding: 5px;
+}

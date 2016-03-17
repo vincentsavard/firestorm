@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="firestorm">
+  <head>
+    <title>Firestorm</title>
+    <meta charset="utf-8" />
+
+    <!-- css -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="firestorm/media/media.css" rel="stylesheet" />
+    <link href="firestorm/player/player.css" rel="stylesheet" />
+    
+    <!-- libs -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    
+    <!-- firestorm -->
+    <script src="app.js"></script>
+    <script src="firestorm/media/media-controller.js"></script>
+  </head>
+
+  <body>
+    <div ng-view></div>
+  </body>
+</html>

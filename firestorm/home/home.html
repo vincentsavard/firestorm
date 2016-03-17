@@ -1,0 +1,35 @@
+<div ng-controller="MediaController">
+  <div class="error">
+    Error: {{ error }}
+  </div>
+
+  <div class="header">
+    <div class="update_container">
+      <a title="Update media repository" class="glyphicon glyphicon-refresh player_button" ng-click="update()"></a>
+    </div>
+    
+    <div class="player_buttons">
+      <a class="glyphicon glyphicon-play player_button" ng-click="play()"></a>
+      <a class="glyphicon glyphicon-pause player_button" ng-click="pause()"></a>
+      <a class="glyphicon glyphicon-stop player_button" ng-click="stop()"></a>
+    </div>
+
+    <div class="player_status">
+      <ul>
+	<li>Status: {{ status }}</li>
+	<li>Media: {{ loaded_media_title }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="all_medias">
+    <div ng-repeat="media in medias.medias" class="media_container collapse-group">
+      <a class="btn btn-default btn-block media_title" data-toggle="collapse" data-target="#{{ media.id }}">{{ extractNameFromPath(media.uri) }}</a>
+      <div class="collapse" id="{{ media.id }}">
+	<div class="media_info">
+	  <a ng-click="load(media.id, extractNameFromPath(media.uri))">Load</a>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>

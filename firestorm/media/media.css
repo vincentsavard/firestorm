@@ -1,0 +1,39 @@
+.all_medias {
+    position: absolute;
+    top: 165px;
+    width: 100%;
+}
+
+.error {
+    display: none
+}
+
+.header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #eeeeee;
+    display: block;
+    height: 150px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.media_container {
+    margin: auto;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 80%;
+}
+
+.media_title {
+    background-color: #eeeeee;
+}
+
+.media_info {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-top: 2px;
+    padding: 5px;
+    text-align: left;
+}
