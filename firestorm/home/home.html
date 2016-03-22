@@ -16,8 +16,8 @@
 
     <div class="player_status">
       <ul>
-	<li>Status: {{ status }}</li>
-	<li>Media: {{ loaded_media_title }}</li>
+	<li>Playing: {{ is_playing ? "Playing" : "Not playing" }}</li>
+	<li>Media: {{ extractNameFromPath(loaded_media.uri) }}</li>
       </ul>
     </div>
   </div>
@@ -27,7 +27,7 @@
       <a class="btn btn-default btn-block media_title" data-toggle="collapse" data-target="#{{ media.id }}">{{ extractNameFromPath(media.uri) }}</a>
       <div class="collapse" id="{{ media.id }}">
 	<div class="media_info">
-	  <a ng-click="load(media.id, extractNameFromPath(media.uri))">Load</a>
+	  <a ng-click="load(media.id)">Load</a>
 	</div>
       </div>
     </div>
