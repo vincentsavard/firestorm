@@ -23,7 +23,7 @@
     margin: auto;
     margin-bottom: 5px;
     text-align: center;
-    width: 80%;
+    width: 50%;
 }
 
 .media_title {
@@ -36,4 +36,13 @@
     margin-top: 2px;
     padding: 5px;
     text-align: left;
+}
+
+.versions_container {
+    color: #cccccc;
+    padding: 5px;
+}
+
+.versions_container li {
+    list-style-type: none;
 }

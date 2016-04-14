@@ -6,6 +6,8 @@ app.controller("MediaController", function($scope, $http, config) {
 	$scope.is_playing = false;
 	$scope.updateStatus()
 	$scope.listMedias();
+	$scope.getApiVersion();
+	$scope.getClientVersion();
     };
 
     $scope.update = function() {
@@ -91,6 +93,28 @@ app.controller("MediaController", function($scope, $http, config) {
 	    return path.split("/").slice(-1)[0];
 	}
     };
+
+    $scope.getApiVersion = function() {
+	$http({
+	    method: "GET",
+	    url: config.api_url + "/version"
+	}).then(function(response) {
+	    $scope.apiVersion = response.data.version;
+	}, function(error) {
+	    $scope.apiVersion = "0";
+	});
+    };
+
+    $scope.getClientVersion = function() {
+	$http({
+	    method: "GET",
+	    url: "version.json"
+	}).then(function(response) {
+	    $scope.clientVersion = response.data.version;
+	}, function(error) {
+	    $scope.clientVersion = "0";
+	});
+    }
     
     $scope.init();
 });

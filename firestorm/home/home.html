@@ -20,6 +20,7 @@
 	<li>Media: {{ extractNameFromPath(loaded_media.uri) }}</li>
       </ul>
     </div>
+
   </div>
 
   <div class="all_medias">
@@ -30,6 +31,13 @@
 	  <a ng-click="load(media.id)">Load</a>
 	</div>
       </div>
+    </div>
+
+    <div class="versions_container">
+      <ul>
+	<li>API Version: {{ apiVersion }}</li>
+	<li>Client Version: {{ clientVersion }}</li>
+      </ul>
     </div>
   </div>
 </div>
