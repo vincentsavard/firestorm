@@ -17,15 +17,15 @@
     <div class="player_status">
       <ul>
 	<li>Playing: {{ is_playing ? "Playing" : "Not playing" }}</li>
-	<li>Media: {{ extractNameFromPath(loaded_media.uri) }}</li>
+	<li>Media: {{ loaded_media.title }}</li>
       </ul>
     </div>
 
   </div>
 
   <div class="all_medias">
-    <div ng-repeat="media in medias.medias" class="media_container collapse-group">
-      <a class="btn btn-default btn-block media_title" data-toggle="collapse" data-target="#{{ media.id }}">{{ extractNameFromPath(media.uri) }}</a>
+    <div ng-repeat="media in medias.medias | orderBy:'title'" class="media_container collapse-group">
+      <a class="btn btn-default btn-block media_title" data-toggle="collapse" data-target="#{{ media.id }}">{{ media.title }}</a>
       <div class="collapse" id="{{ media.id }}">
 	<div class="media_info">
 	  <a ng-click="load(media.id)">Load</a>
